@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4f8262d-6d0c-4264-917a-79b0fb4e5677" name="Changes" comment="Initial commit with project structure">
+    <list default="true" id="d4f8262d-6d0c-4264-917a-79b0fb4e5677" name="Changes" comment="added homework 18">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/EstoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/EstoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/WebAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/WebAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +41,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn test" />
+      <command value="mvn test -Dtest=WebAppTest" />
+      <command value="mvn test -Dtest=WebAppTest -Dselenide.browser=firefox" />
+    </option>
+  </component>
   <component name="RunManager" selected="JUnit.EstoTest">
     <configuration name="EstoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UI_tests" />
@@ -57,22 +72,6 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.EstoTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EstoTest.mobileIdLoginOptionIsAvailable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UI_tests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.EstoTest" />
-      <option name="METHOD_NAME" value="mobileIdLoginOptionIsAvailable" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,7 +92,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EstoTest.smartIdInvalidFormatError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WebAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UI_tests" />
       <extension name="coverage">
         <pattern>
@@ -102,14 +101,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.EstoTest" />
-      <option name="METHOD_NAME" value="smartIdInvalidFormatError" />
+      <option name="MAIN_CLASS_NAME" value="org.example.WebAppTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebAppTest.incorrectLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UI_tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.WebAppTest" />
+      <option name="METHOD_NAME" value="incorrectLogin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EstoTest.smartIdLoginOptionIsAvailable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WebAppTest.successfulLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UI_tests" />
       <extension name="coverage">
         <pattern>
@@ -118,8 +132,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.EstoTest" />
-      <option name="METHOD_NAME" value="smartIdLoginOptionIsAvailable" />
+      <option name="MAIN_CLASS_NAME" value="org.example.WebAppTest" />
+      <option name="METHOD_NAME" value="successfulLogin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,9 +143,9 @@
       <list>
         <item itemvalue="JUnit.EstoTest" />
         <item itemvalue="JUnit.EstoTest.passwordLoginWithIncorrectCredentials" />
-        <item itemvalue="JUnit.EstoTest.smartIdInvalidFormatError" />
-        <item itemvalue="JUnit.EstoTest.mobileIdLoginOptionIsAvailable" />
-        <item itemvalue="JUnit.EstoTest.smartIdLoginOptionIsAvailable" />
+        <item itemvalue="JUnit.WebAppTest" />
+        <item itemvalue="JUnit.WebAppTest.successfulLogin" />
+        <item itemvalue="JUnit.WebAppTest.incorrectLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -151,11 +165,19 @@
       <option name="project" value="LOCAL" />
       <updated>1681638383337</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added homework 18">
+      <created>1681652558754</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681652558754</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit with project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit with project structure" />
+    <MESSAGE value="added homework 18" />
+    <option name="LAST_COMMIT_MESSAGE" value="added homework 18" />
   </component>
 </project>

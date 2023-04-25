@@ -4,6 +4,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -13,9 +14,14 @@ import static com.codeborne.selenide.Selenide.*;
 public class EstoTest {
 
     @BeforeEach
-    public void openSite() {
+    public void setUp() {
         Configuration.browser = "firefox";
         open("https://profile.esto.ee/login");
+    }
+
+    @AfterEach
+    public void tearDown() {
+        closeWebDriver();
     }
 
     @Test
@@ -51,8 +57,7 @@ public class EstoTest {
 
         passwordLoginOptionButton.shouldBe(Condition.exist);
         passwordLoginOptionButton.click();
-
-
+        
         $(By.xpath("//*[@id='login-field']/div/input")).shouldBe(Condition.visible);
         $(By.xpath("//*[@id='password-field']/div/input")).shouldBe(Condition.visible);
         $(By.xpath("//button[@data-cy='password-login-button']")).shouldBe(Condition.exist);
@@ -78,19 +83,21 @@ public class EstoTest {
     @Test
     public void passwordLoginWithIncorrectCredentials() {
 
-        SelenideElement passwordLoginOptionButton = $(By.xpath("//a[@data-cy='method-password']"));
+        EstoPage estoPage = new EstoPage();
+
+        SelenideElement passwordLoginOptionButton = $(By.xpath("//*[@data-cy='method-password']"));
         SelenideElement loginButton = $(By.xpath("//button[@data-cy='password-login-button']"));
-        SelenideElement usernameInput = $(By.xpath("//*[@id='login-field']/div/input"));
-        SelenideElement passwordInput = $(By.xpath("//*[@id='password-field']/div/input"));
+
+        // Homework 19 Task 1
 
         passwordLoginOptionButton.click();
-        usernameInput.setValue("wrongValue");
-        passwordInput.setValue("wrongValue");
+
+        estoPage.insertUserName("someWrongValue");
+        estoPage.insertPassword("someWrongValue");
 
         loginButton.click();
 
         $(By.xpath("//*[@data-cy='password-login-error']")).shouldBe(Condition.visible);
-
 
     }
 
